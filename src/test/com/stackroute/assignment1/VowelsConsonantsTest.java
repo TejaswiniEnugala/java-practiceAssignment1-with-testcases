@@ -1,24 +1,25 @@
 package test.com.stackroute.assignment1;
 
 import main.java.com.stackroute.assignment1.VowelsConsonants;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class VowelsConsonantsTest {
-    VowelsConsonants vo;
+    VowelsConsonants string;
     @Before
     public void setUp()
     {
-        vo=new VowelsConsonants();
+        string=new VowelsConsonants();
     }
 @Test
         public void checkWhetherVowel()
 
     {
 
-        String result = vo.checkvowel("a");
+        String result = string.checkvowel("a");
         assertEquals("vowel ", result);
     }
     @Test
@@ -26,13 +27,17 @@ public class VowelsConsonantsTest {
 
     {
 
-        String result = vo.checkvowel("b");
+        String result = string.checkvowel("b");
         assertEquals("consonant ", result);
     }
     @Test
     public void checkWhetherVowel1() {
 
-        String result = vo.checkvowel("ab");
+        String result = string.checkvowel("ab");
         assertEquals("vowel consonant ", result);
+    }
+    @After
+    public void tearDown(){
+        string=null;
     }
 }

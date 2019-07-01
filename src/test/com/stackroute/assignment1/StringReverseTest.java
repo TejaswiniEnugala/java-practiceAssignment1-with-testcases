@@ -1,6 +1,7 @@
 package test.com.stackroute.assignment1;
 
 import main.java.com.stackroute.assignment1.StringReverse;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,12 +25,16 @@ public class StringReverseTest {
         assertEquals(expectedResult,actualResult);
     }
     @Test
-    public void checkReverseOfString1()
+    public void returnTheReverseOfString()
     {
         actualResult=obj.StringReverse("mini");
         expectedResult="inim";
         assertEquals(expectedResult,actualResult);
     }
-
+@After
+    public  void tearDown()
+{
+    obj=null;
+}
 
 }

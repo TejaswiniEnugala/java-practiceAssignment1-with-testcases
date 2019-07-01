@@ -1,9 +1,9 @@
-package main.java.com.stackroute.assignment1;
+package main.java.com.stackroute.assignment1;   //program to check whether the given input is a palindrome or not
 
 public class Palindrome {
     public static String checkWhetherNumberIsPalindromeOrNot(int n) {
         int temp, r, sum = 0, add = 0;
-        String s;
+        String str;
         temp = n;
         while (n != 0) {
             r = n % 10;
@@ -14,11 +14,11 @@ public class Palindrome {
             }
         }
         if (sum == temp) {
-            s="it is a palindrome and the sum is"+" "+add;
+            str="it is a palindrome and the sum is"+" "+add;
         } else {
-            s = "notpalindrome";
+            str = "notpalindrome";
         }
-        return s;
+        return str;
     }
 }
 

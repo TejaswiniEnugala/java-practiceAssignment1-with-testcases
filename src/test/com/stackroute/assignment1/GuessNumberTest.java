@@ -1,47 +1,53 @@
 package test.com.stackroute.assignment1;
 
 import main.java.com.stackroute.assignment1.GuessNumber;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class GuessNumberTest {
-    GuessNumber gn;
+    GuessNumber num;
     String actualResult;
     String expectedResult;
 
     @Before
 public void setUp(){
-        gn=new GuessNumber();
+        num=new GuessNumber();
     }
     @Test
-    public void checkingGuessMatches()
+    public void checkingIfGuessedNumberMatchesTheOriginalNumber()
     {
-        String result=gn.guess(51);
+        String result=num.checkWhetherTheGuessedNumberMatchesTheActualNumber(51);
         expectedResult="number guessed matches the original number";
         assertEquals(expectedResult,result);
     }
     @Test
-    public void checkNumberSmaller()
+    public void checkIfGuessedNumberIsSmallerThanActualNumber()
     {
-        String result=gn.guess(49);
+        String result=num.checkWhetherTheGuessedNumberMatchesTheActualNumber(49);
         expectedResult="number is smaller than original number";
         assertEquals(expectedResult,result);
     }
     @Test
-    public void checkNumberGreater()
+    public void checkIfGuessedNumberIsGreaterThanActualNumber()
     {
-        String result=gn.guess(59);
+        String result=num.checkWhetherTheGuessedNumberMatchesTheActualNumber(59);
         expectedResult="number is greater than original number";
         assertEquals(expectedResult,result);
     }
     @Test
-    public void checkOutOfRange()
+    public void checkIfTheGuessedNumberIsOutOfRange()
     {
-        String result=gn.guess(200);
+        String result=num.checkWhetherTheGuessedNumberMatchesTheActualNumber(200);
         expectedResult="number is not in range";
         assertEquals(expectedResult,result);
+    }
+    @After
+    public void tearDown()
+    {
+        num=null;
     }
 
 

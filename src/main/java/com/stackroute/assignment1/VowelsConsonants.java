@@ -1,19 +1,19 @@
-package main.java.com.stackroute.assignment1;
+package main.java.com.stackroute.assignment1;  // THis program is to check whether input is vowel or consonant
 
 public class VowelsConsonants {
     public static String checkvowel (String str)
     {
-     String s="";
+     String string="";
         int len = str.length();
         for (int i = 0; i < len; i++) {
-            char c = str.charAt(i);
-            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
-                s=s+"vowel"+" ";
+            char input = str.charAt(i);
+            if (input == 'a' || input == 'e' || input == 'i' || input == 'o' || input == 'u') {
+                string=string+"vowel"+" ";
             } else {
-                s=s+"consonant"+" ";
+                string=string+"consonant"+" ";
             }
         }
-        return s;
+        return string;
 
     }
 }

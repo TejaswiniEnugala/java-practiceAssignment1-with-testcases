@@ -1,7 +1,7 @@
-package main.java.com.stackroute.assignment1;
+package main.java.com.stackroute.assignment1;  //It is a program to check whether our guessed number matches the original number
 
 public class GuessNumber {
-    public static String guess(int n)
+    public static String checkWhetherTheGuessedNumberMatchesTheActualNumber(int n)
     {
         int m=51;
         String s="";

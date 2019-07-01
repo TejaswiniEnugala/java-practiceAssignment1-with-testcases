@@ -1,19 +1,19 @@
 package test.com.stackroute.assignment1;
 
-import main.java.com.stackroute.assignment1.EvenOdd;
+import main.java.com.stackroute.assignment1.EvenOddChecker;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class EvenOddTest {
-    EvenOdd evenodd;
+public class EvenOddCheckerTest {
+    EvenOddChecker evenodd;
     String actualResult;
     String expectedResult;
     @Before
     public void setUp()throws Exception{
-        evenodd=new EvenOdd();
+        evenodd=new EvenOddChecker();
             }
             @Test
     public void checkWhetherItIsEven(){

@@ -1,29 +1,35 @@
 package test.com.stackroute.assignment1;
 
 import main.java.com.stackroute.assignment1.StringPattern;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class StringPatternTest {
-    StringPattern si;
+    StringPattern stringpattern;
     @Before
     public void setUp()
     {
-        si=new StringPattern();
+        stringpattern=new StringPattern();
     }
 @Test
     public void returnPatternOfString()
 {
-    String result=si.print("route",2);
+    String result=stringpattern.printStringSequence("route",2);
     assertEquals("routetete",result);
 }
 
     @Test
-    public void returnPatternOfString1()
+    public void printPatternOfString()
     {
-        String result=si.print("stack",3);
+        String result=stringpattern.printStringSequence("stack",3);
         assertEquals("stackackackack",result);
+    }
+    @After
+    public void tearDown()
+    {
+        stringpattern=null;
     }
 }

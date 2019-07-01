@@ -1,11 +1,11 @@
-package main.java.com.stackroute.assignment1;
+package main.java.com.stackroute.assignment1;       //It is a program to check the input whether it is a capital letter or small letter or any other special symbol
 
 public class CapitalOrNot {
         public static String CapitalOrNot( char ch)
     {
         String s="";
         if (ch >= 65 & ch <= 90) {
-            s = "Capital letter";
+            s = "uppercase letter";
 
         }
         else if (ch >= 97 & ch <= 122) {

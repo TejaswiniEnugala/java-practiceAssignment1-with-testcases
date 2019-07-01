@@ -1,6 +1,7 @@
 package test.com.stackroute.assignment1;
 
 import main.java.com.stackroute.assignment1.Palindrome;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -28,6 +29,10 @@ public void checkWhetherItIsNotPalindrome()
     actualResult=obj.checkWhetherNumberIsPalindromeOrNot(1213);
     expectedResult="notpalindrome";
     assertEquals(expectedResult,actualResult);
+}
+@After
+    public void tearDown()throws Exception{
+        obj=null;
 }
 
 }

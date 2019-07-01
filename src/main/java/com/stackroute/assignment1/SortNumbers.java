@@ -1,14 +1,14 @@
-package main.java.com.stackroute.assignment1;
+package main.java.com.stackroute.assignment1; //This program is to sort the given numbers in an array
 
-public class Sort {
+public class SortNumbers {
     public static String sortingList(int[] array){
         int i,j,swap;
         int sum=0;
-        String s;
-        int n=array.length;
-        for(i=0;i<n-1;i++)
+        String string;
+        int len=array.length;
+        for(i=0;i<len-1;i++)
         {
-            for(j=i;j<n-i-1;j++)
+            for(j=i;j<len-i-1;j++)
             {
                 if(array[j]>array[j+1])
                 {
@@ -23,18 +23,18 @@ public class Sort {
                 }
             }
         }
-        s="sorted list of elements";
-        for(i=n-1;i>=0;i--)
+        string="sorted list of elements";
+        for(i=len-1;i>=0;i--)
             System.out.println(array[i]);
         System.out.println();
-        for(i=0;i<n;i++)
+        for(i=0;i<len;i++)
         {
             if(array[i]%2==0)
             {
                 sum=sum+array[i];
             }
         }
-        s="sum of even numbers is "+sum;
+        string="sum of even numbers is "+sum;
         if(sum>15){
             System.out.println("true");
               }
@@ -42,6 +42,6 @@ else
         {
             System.out.println("false");
         }
-return s;
+return string;
     }
 }
